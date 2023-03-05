@@ -1,0 +1,12 @@
+[plex]
+
+backend = auto
+enabled = true
+port = 80,443
+protocol = tcp
+filter = plex
+maxretry = 3
+bantime = 86400
+findtime = 43200
+logpath = /logs/plex/
+action = iptables-allports[name=plex, chain=DOCKER-USER]
